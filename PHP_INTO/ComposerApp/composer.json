@@ -1,0 +1,15 @@
+{
+	"name": "dreamboy/composer-app",
+	"authors": [
+		{
+			"name": "dreamboy",
+			"email": "dreamboy@gmail.com"
+		}
+	],
+	"require" : {
+		"monolog/monolog": "^2.3"
+	},
+	"autoload": {
+        "psr-4": {"Greeting\\": "source/Greeting/"}
+    }
+}
