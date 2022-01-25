@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Interface1</title>
+</head>
+<body>
+	<?php
+		interface ContractInterface {
+			public function promiseMethod(array $param):int;
+		}
+		interface ContractInterface2 {
+			public function promiseMethod2(array $param):int;
+		}
+
+		class ConcreateClass implements ContractInterface, ContractInterface2 {
+			public function promiseMethod(array $param):int {
+				return 1;
+			}
+			public function promiseMethod2(array $param):int {
+				return 1;
+			}
+		}
+		$obj = new ConcreateClass();
+		$obj->promiseMethod([1,2]);
+	?>
+</body>
+</html>
